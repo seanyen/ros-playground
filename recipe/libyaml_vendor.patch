@@ -1,0 +1,11 @@
+--- src/libyaml_vendor/CMakeLists.txt
++++ src/libyaml_vendor/CMakeLists.txt
+@@ -64,7 +64,7 @@
+   )
+ endmacro()
+ 
+-build_libyaml()
++# build_libyaml()
+ 
+ ament_export_libraries(yaml)
+ 

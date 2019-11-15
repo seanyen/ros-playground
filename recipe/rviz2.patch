@@ -1,0 +1,20 @@
+--- src/rviz/rviz2/CMakeLists.txt
++++ src/rviz/rviz2/CMakeLists.txt
+@@ -23,7 +23,7 @@
+ 
+ find_package(Qt5 REQUIRED COMPONENTS Widgets)
+ # TODO(wjwwood): this block is to setup the windeployqt tool, could be removed later.
+-if(Qt5_FOUND AND WIN32 AND TARGET Qt5::qmake AND NOT TARGET Qt5::windeployqt)
++if(FALSE)
+   get_target_property(_qt5_qmake_location Qt5::qmake IMPORTED_LOCATION)
+ 
+   execute_process(
+@@ -58,7 +58,7 @@
+ #                necessary dlls and stuff to the bin folder.
+ #                see:
+ # https://stackoverflow.com/questions/41193584/deploy-all-qt-dependencies-when-building#41199492
+-if(TARGET Qt5::windeployqt)
++if(FALSE)
+   # execute windeployqt in a tmp directory after build
+   add_custom_command(TARGET ${PROJECT_NAME}
+     POST_BUILD

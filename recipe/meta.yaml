@@ -1,0 +1,344 @@
+{% set name = "ros" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  - git_url: https://github.com/ament/ament_cmake.git
+    git_rev: master
+    folder: src/ament_cmake
+  - git_url: https://github.com/ros2/ament_cmake_ros.git
+    git_rev: master
+    folder: src/ament_cmake_ros
+  - git_url: https://github.com/ament/ament_index.git
+    git_rev: master
+    folder: src/ament_index
+  - git_url: https://github.com/ament/ament_lint.git
+    git_rev: master
+    folder: src/ament_lint
+  - git_url: https://github.com/ament/ament_package.git
+    git_rev: master
+    folder: src/ament_package
+  - git_url: https://github.com/ros/class_loader.git
+    git_rev: ros2
+    folder: src/class_loader
+  - git_url: https://github.com/ros2/common_interfaces.git
+    git_rev: master
+    folder: src/common_interfaces
+  - git_url: https://github.com/ros2/console_bridge_vendor.git
+    git_rev: master
+    folder: src/console_bridge_vendor
+  # - git_url: https://github.com/ros2/demos.git
+  #   git_rev: master
+  #   folder: src/demos
+  - git_url: https://github.com/ros2/example_interfaces.git
+    git_rev: master
+    folder: src/example_interfaces
+  - git_url: https://github.com/ros2/examples.git
+    git_rev: master
+    folder: src/examples
+  - git_url: https://github.com/eProsima/Fast-CDR.git
+    git_rev: v1.0.11
+    folder: src/Fast-CDR
+  - git_url: https://github.com/eProsima/Fast-RTPS.git
+    git_rev: 141b778c66c4f1f7aeb5c55551c173e3237beae9
+    folder: src/Fast-RTPS
+  - git_url: https://github.com/eProsima/foonathan_memory_vendor.git
+    git_rev: master
+    folder: src/foonathan_memory_vendor
+  - git_url: https://github.com/ros2/launch.git
+    git_rev: master
+    folder: src/launch
+  - git_url: https://github.com/ros2/launch_ros.git
+    git_rev: master
+    folder: src/launch_ros
+  - git_url: https://github.com/ros2/libyaml_vendor.git
+    git_rev: master
+    folder: src/libyaml_vendor
+    patches:
+      - libyaml_vendor.patch
+  - git_url: https://github.com/osrf/osrf_pycommon.git
+    git_rev: master
+    folder: src/osrf_pycommon
+  - git_url: https://github.com/osrf/osrf_testing_tools_cpp.git
+    git_rev: master
+    folder: src/osrf_testing_tools_cpp
+  - git_url: https://github.com/ros/pluginlib.git
+    git_rev: ros2
+    folder: src/pluginlib
+  - git_url: https://github.com/ros2/poco_vendor.git
+    git_rev: master
+    folder: src/poco_vendor
+  - git_url: https://github.com/ros2/python_cmake_module.git
+    git_rev: master
+    folder: src/python_cmake_module
+  - git_url: https://github.com/ros2/rcl.git
+    git_rev: master
+    folder: src/rcl
+  - git_url: https://github.com/ros2/rcl_interfaces.git
+    git_rev: master
+    folder: src/rcl_interfaces
+  - git_url: https://github.com/ros2/rcl_logging.git
+    git_rev: master
+    folder: src/rcl_logging
+  - git_url: https://github.com/ros2/rclcpp.git
+    git_rev: master
+    folder: src/rclcpp
+  - git_url: https://github.com/ros2/rclpy.git
+    git_rev: master
+    folder: src/rclpy
+  - git_url: https://github.com/ros2/rcpputils.git
+    git_rev: master
+    folder: src/rcpputils
+  - git_url: https://github.com/ros2/rcutils.git
+    git_rev: master
+    folder: src/rcutils
+  - git_url: https://github.com/ros2/rmw.git
+    git_rev: master
+    folder: src/rmw
+  - git_url: https://github.com/ros2/rmw_connext.git
+    git_rev: master
+    folder: src/rmw_connext
+  - git_url: https://github.com/ros2/rmw_fastrtps.git
+    git_rev: master
+    folder: src/rmw_fastrtps
+  - git_url: https://github.com/ros2/rmw_implementation.git
+    git_rev: master
+    folder: src/rmw_implementation
+  - git_url: https://github.com/ros2/rmw_opensplice.git
+    git_rev: master
+    folder: src/rmw_opensplice
+  - git_url: https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git
+    git_rev: master
+    folder: src/ros2_tracing
+  - git_url: https://github.com/ros2/ros2cli.git
+    git_rev: master
+    folder: src/ros2cli
+  - git_url: https://github.com/ros/ros_environment.git
+    git_rev: eloquent
+    folder: src/ros_environment
+  - git_url: https://github.com/ros2/ros_testing.git
+    git_rev: master
+    folder: src/ros_testing
+  - git_url: https://github.com/ros2/rosidl.git
+    git_rev: master
+    folder: src/rosidl
+  - git_url: https://github.com/ros2/rosidl_dds.git
+    git_rev: master
+    folder: src/rosidl_dds
+  - git_url: https://github.com/ros2/rosidl_defaults.git
+    git_rev: master
+    folder: src/rosidl_defaults
+  - git_url: https://github.com/ros2/rosidl_python.git
+    git_rev: master
+    folder: src/rosidl_python
+  - git_url: https://github.com/ros2/rosidl_runtime_py.git
+    git_rev: master
+    folder: src/rosidl_runtime_py
+  - git_url: https://github.com/ros2/rosidl_typesupport.git
+    git_rev: master
+    folder: src/rosidl_typesupport
+  - git_url: https://github.com/ros2/rosidl_typesupport_connext.git
+    git_rev: master
+    folder: src/rosidl_typesupport_connext
+  - git_url: https://github.com/ros2/rosidl_typesupport_fastrtps.git
+    git_rev: master
+    folder: src/rosidl_typesupport_fastrtps
+  - git_url: https://github.com/ros2/rosidl_typesupport_opensplice.git
+    git_rev: master
+    folder: src/rosidl_typesupport_opensplice
+  - git_url: https://github.com/ros2/rviz.git
+    git_rev: ros2
+    folder: src/rviz
+    patches:
+      - rviz_ogre_vendor.patch
+      - rviz2.patch
+  - git_url: https://github.com/ros2/spdlog_vendor.git
+    git_rev: master
+    folder: src/spdlog_vendor
+  - git_url: https://github.com/ros2/sros2.git
+    git_rev: master
+    folder: src/sros2
+  - git_url: https://github.com/ros2/test_interface_files.git
+    git_rev: master
+    folder: src/test_interface_files
+  - git_url: https://github.com/ros2/tinydir_vendor.git
+    git_rev: master
+    folder: src/tinydir_vendor
+  - git_url: https://github.com/ros2/tinyxml2_vendor.git
+    git_rev: master
+    folder: src/tinyxml2_vendor
+  - git_url: https://github.com/ros2/tinyxml_vendor.git
+    git_rev: master
+    folder: src/tinyxml_vendor
+  - git_url: https://github.com/ament/uncrustify_vendor.git
+    git_rev: master
+    folder: src/uncrustify_vendor
+  - git_url: https://github.com/ros2/unique_identifier_msgs.git
+    git_rev: master
+    folder: src/unique_identifier_msgs
+  - git_url: https://github.com/ros2/variants.git
+    git_rev: master
+    folder: src/variants
+  - git_url: https://github.com/ament/googletest.git
+    git_rev: ros2
+    folder: src/googletest
+  - git_url: https://github.com/ros-perception/laser_geometry.git
+    git_rev: ros2
+    folder: src/laser_geometry
+  - git_url: https://github.com/ros-planning/navigation_msgs.git
+    git_rev: ros2
+    folder: src/navigation_msgs
+  - git_url: https://github.com/ros-visualization/interactive_markers.git
+    git_rev: ros2
+    folder: src/interactive_markers
+  - git_url: https://github.com/ros-visualization/python_qt_binding.git
+    git_rev: crystal-devel
+    folder: src/python_qt_binding
+  - git_url: https://github.com/ros-visualization/qt_gui_core.git
+    git_rev: crystal-devel
+    folder: src/qt_gui_core
+  - git_url: https://github.com/ros-visualization/rqt.git
+    git_rev: crystal-devel
+    folder: src/rqt
+  - git_url: https://github.com/ros/resource_retriever.git
+    git_rev: ros2
+    folder: src/resource_retriever
+  - git_url: https://github.com/ros/robot_state_publisher.git
+    git_rev: ros2
+    folder: src/robot_state_publisher
+  - git_url: https://github.com/ros2/orocos_kinematics_dynamics.git
+    git_rev: ros2
+    folder: src/orocos_kinematics_dynamics
+  - git_url: https://github.com/ros2/kdl_parser.git
+    git_rev: ros2
+    folder: src/kdl_parser
+  - git_url: https://github.com/ros/urdfdom_headers.git
+    git_rev: master
+    folder: src/urdfdom_headers
+  - git_url: https://github.com/ros2/urdf.git
+    git_rev: ros2
+    folder: src/urdf
+  - git_url: https://github.com/ros2/urdfdom.git
+    git_rev: ros2
+    folder: src/urdfdom
+  - git_url: https://github.com/ros2/geometry2.git
+    git_rev: ros2
+    folder: src/geometry2
+  - git_url: https://github.com/ros2/message_filters.git
+    git_rev: master
+    folder: src/message_filters
+  - git_url: https://github.com/ros2/eigen3_cmake_module.git
+    git_rev: master
+    folder: src/eigen3_cmake_module
+  - git_url: https://github.com/ros2/yaml_cpp_vendor.git
+    git_rev: master
+    folder: src/yaml_cpp_vendor
+
+build:
+  number: 2
+  skip: true  # [not win]
+  run_exports:
+    - {{ pin_subpackage(name, max_pin='x.x') }}
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}              # [not win]
+    - {{ compiler('c') }}                # [not win]
+    - vs2017_win-64                      # [win64]
+    - ninja
+    - cmake
+  host:
+    - colcon-common-extensions
+    - curl
+    - catkin_pkg
+    - empy
+    - pyparsing
+    - pyyaml
+    - pytest
+    - coverage
+    - mock
+    - flake8
+    - flake8-blind-except
+    - flake8-builtins
+    # - flake8-class-newline
+    - flake8-comprehensions
+    # - flake8-deprecated
+    - flake8-docstrings
+    - flake8-import-order
+    - flake8-quotes
+    - pep8
+    - pydocstyle
+    - cppcheck
+    - spdlog
+    - poco
+    - asio
+    - tinyxml
+    - tinyxml2
+    - log4cxx
+    - lark-parser
+    - numpy
+    - yaml 0.2
+    - eigen
+    - netifaces
+    - lxml
+    - cryptography
+    - qt
+    - freetype
+    - zlib
+  run:
+    - colcon-common-extensions
+    - curl
+    - catkin_pkg
+    - empy
+    - pyparsing
+    - pyyaml
+    - pytest
+    - pytest-cov
+    - pytest-runner
+    - coverage
+    - mock
+    - flake8
+    - flake8-blind-except
+    - flake8-builtins
+    # - flake8-class-newline
+    - flake8-comprehensions
+    # - flake8-deprecated
+    - flake8-docstrings
+    - flake8-import-order
+    - flake8-quotes
+    - pep8
+    - pydocstyle
+    - cppcheck
+    - spdlog
+    - poco
+    - asio
+    - tinyxml
+    - tinyxml2
+    - log4cxx
+    - lark-parser
+    - numpy
+    - yaml 0.2
+    - eigen
+    - netifaces
+    - lxml
+    - cryptography
+    - qt
+    - freetype
+    - zlib
+
+test:
+  commands:
+    - if exist %PREFIX%\\Library\\Scripts\\ros2.exe (exit 0) else (exit 1)  # [win]
+
+about:
+  home: https://index.ros.org/doc/ros2/
+  license: BSD-3-Clause
+  summary: |
+    Robot Operating System 2
+
+extra:
+  recipe-maintainers:
+    - seanyen
