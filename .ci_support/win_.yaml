@@ -4,6 +4,20 @@ channel_targets:
 - ros-playground main
 curl:
 - '7.64'
+freetype:
+- 2.9.1
+numpy:
+- '1.14'
 pin_run_as_build:
   curl:
     max_pin: x
+  freetype:
+    max_pin: x
+  qt:
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+qt:
+- '5.12'
+zlib:
+- '1.2'
