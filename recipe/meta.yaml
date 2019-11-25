@@ -30,9 +30,9 @@ source:
   - git_url: https://github.com/ros2/console_bridge_vendor.git
     git_rev: master
     folder: src/console_bridge_vendor
-  # - git_url: https://github.com/ros2/demos.git
-  #   git_rev: master
-  #   folder: src/demos
+  - git_url: https://github.com/ros2/demos.git
+    git_rev: master
+    folder: src/demos
   - git_url: https://github.com/ros2/example_interfaces.git
     git_rev: master
     folder: src/example_interfaces

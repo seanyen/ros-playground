@@ -14,6 +14,7 @@ colcon build ^
     --merge-install ^
     --install-base %LIBRARY_PREFIX% ^
     --build-base "d:/tbld" ^
+    --packages-skip intra_process_demo image_tools ^
     --cmake-args ^
      -G Ninja ^
      -DCMAKE_BUILD_TYPE=Release ^
