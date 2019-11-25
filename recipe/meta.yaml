@@ -238,7 +238,7 @@ source:
     folder: src/yaml_cpp_vendor
 
 build:
-  number: 2
+  number: 3
   skip: true  # [not win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
