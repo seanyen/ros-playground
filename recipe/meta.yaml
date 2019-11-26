@@ -238,7 +238,7 @@ source:
     folder: src/yaml_cpp_vendor
 
 build:
-  number: 3
+  number: 4
   skip: true  # [not win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -289,6 +289,8 @@ requirements:
     - freetype
     - zlib
     - opencv
+    - pyqt
+    - pyside2
   run:
     - colcon-common-extensions
     - curl
@@ -330,6 +332,8 @@ requirements:
     - freetype
     - zlib
     - opencv
+    - pyqt
+    - pyside2
 
 test:
   commands:
