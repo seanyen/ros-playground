@@ -288,6 +288,7 @@ requirements:
     - qt
     - freetype
     - zlib
+    - opencv
   run:
     - colcon-common-extensions
     - curl
@@ -328,6 +329,7 @@ requirements:
     - qt
     - freetype
     - zlib
+    - opencv
 
 test:
   commands:
